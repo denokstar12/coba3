@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digivolve Studio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOGIN AWAL -->
+<div id="loginScreen" class="center">
+  <h1>Login Digivolve Studio</h1>
+  <input type="password" id="password" placeholder="Masukkan Password">
+  <button onclick="login()">Masuk</button>
+</div>
+
+<!-- MAIN WEBSITE -->
+<div id="mainContent" style="display:none;">
+
+<header>
+  <h1>Digivolve Studio</h1>
+  <nav>
+    <a onclick="showPopup('aboutPopup')">Tentang Kami</a>
+    <a onclick="showPopup('produkPopup')">Produk</a>
+    <a onclick="logout()">Logout</a>
+  </nav>
+</header>
+
+</div>
+
+<!-- POPUP ABOUT -->
+<div id="aboutPopup" class="modal">
+  <div class="modal-content anim">
+    <h2>Tentang Kami</h2>
+    <p>Kami adalah usaha digital yang bergerak di bidang desain, website, dan media sosial.</p>
+    <button onclick="closeModal('aboutPopup')">Tutup</button>
+  </div>
+</div>
+
+<!-- POPUP PRODUK -->
+<div id="produkPopup" class="modal">
+  <div class="modal-content anim">
+    <h2>Produk Kami</h2>
+    <p>1. Desain Grafis<br>2. Website<br>3. Manajemen Sosial Media</p>
+    <button onclick="closeModal('produkPopup')">Tutup</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
